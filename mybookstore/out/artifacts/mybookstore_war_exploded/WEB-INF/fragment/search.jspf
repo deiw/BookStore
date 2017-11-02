@@ -1,0 +1,8 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<div class="container">
+    <div style="text-align: center">
+        <form method="get" action="/search">
+            <input class="search" placeholder="Search in shop..." type="search" name="search"/>
+        </form>
+    </div>
+</div>
