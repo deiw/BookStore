@@ -3,7 +3,7 @@
 Functionality:
 1. login
 2. register
-3. user can check current orders and history orders
+3. user can make orders and check current orders and history orders
 4. admin panel for checking orders, making them completed and adding new books
 5. search books by author,title, genre, pages
 
