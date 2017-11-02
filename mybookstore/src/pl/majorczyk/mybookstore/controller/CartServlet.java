@@ -29,7 +29,7 @@ public class CartServlet extends HttpServlet {
         if(action!=null) {
             if ("remove".equals(action)) {
                 Cart rCart = new Cart(cart);
-                rCart.setPrice(cart.getPrice() / cart.getAmount());
+                rCart.setPrice(cartService.getPrice(cart.getPrice(),cart.getAmount()));
                 cartList = cartService.getListAfterRemove(cartList, rCart);
                 setAttributes(request, cartList, cartService);
                 response.sendRedirect(getServletContext().getContextPath() + "/cart");
