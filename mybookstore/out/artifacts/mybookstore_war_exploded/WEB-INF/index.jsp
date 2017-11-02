@@ -28,7 +28,7 @@
       <section>
         <div class="row bs-callout">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <a href="/book?id=${book.id}"><img class="img-responsive"src="${pageContext.request.contextPath}/images/<c:out value="${book.url}"/>" height="280" width="280"></a>
             </div>
             <div class="col-md-6">
