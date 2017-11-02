@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/css/styles.css" type="text/css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/fontello.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
 </head>
 <body style="background-color: #f8f8f8">
@@ -28,13 +29,13 @@
     <jsp:include page="fragment/search.jspf"/>
 <div class="container">
     <section>
-    <div class="row book-callout">
+    <div class="row bs-callout">
         <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
     <img class="img-responsive" src="${pageContext.request.contextPath}/images/${requestScope.book.url}" height="400" width="400"><br>
         </div>
             <article>
-        <div class="col-md-4">
+        <div class="col-md-6">
          <h3><strong><p>${requestScope.book.title}</p></strong></h3>
             <p style="font-size: medium">Author: <a href="/search?author=${requestScope.book.author}">${requestScope.book.author}</a></p>
             <p style="font-size: medium">Genre: <a href="/search?genre=${requestScope.book.genre}">${requestScope.book.genre}</a></p>

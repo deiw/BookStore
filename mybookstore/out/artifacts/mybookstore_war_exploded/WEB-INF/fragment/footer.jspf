@@ -1,8 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<footer class="footer" style="background-color: #e8e8e8">
+<footer>
+    <div class="footer">
     <div class="container">
         <p style="margin-top: 15px">
             Service Created by &copy <span style="color: #d60000">Dawid Majorczyk</span>
         </p>
+    </div>
     </div>
 </footer>
