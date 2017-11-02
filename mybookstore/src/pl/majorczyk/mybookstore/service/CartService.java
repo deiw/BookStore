@@ -38,4 +38,9 @@ public class CartService {
         }
         return cartList;
     }
+    public double getPrice(double price,double amount){
+        BigDecimal p=new BigDecimal(price).setScale(2,RoundingMode.HALF_UP);
+        BigDecimal a=p.divide(new BigDecimal(amount).setScale(2,RoundingMode.HALF_UP));
+        return a.doubleValue();
+    }
 }
