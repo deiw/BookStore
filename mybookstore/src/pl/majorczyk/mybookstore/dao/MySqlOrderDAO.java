@@ -52,20 +52,20 @@ public class MySqlOrderDAO implements OrderDAO {
 
     @Override
     public List<Order> readActiveOrders() {
-        final String readAllActiveOrdersSQL="SELECT * FROM user JOIN orders ON orders.email=user.email WHERE active=true;";
-        List<Order> activeOrdersList=template.query(readAllActiveOrdersSQL,new OrderRowMapper());
+        final String activeOrdersSQL="SELECT * FROM user JOIN orders ON orders.email=user.email WHERE active=true;";
+        List<Order> activeOrdersList=template.query(activeOrdersSQL,new OrderRowMapper());
         return activeOrdersList;
     }
 
 
     @Override
     public List<Order> readUserOrders(String email,boolean active) {
-        final String readUserOrdersSQL="SELECT * FROM orders WHERE email=:email AND active=:active;";
+        final String userOrdersSQL="SELECT * FROM orders WHERE email=:email AND active=:active;";
         Map<String,Object> map=new HashMap<>();
         map.put("email",email);
         map.put("active",active);
         SqlParameterSource parameterSource=new MapSqlParameterSource(map);
-        List<Order> userActiveOrders=template.query(readUserOrdersSQL,parameterSource, new BeanOrderRowMapper());
+        List<Order> userActiveOrders=template.query(userOrdersSQL,parameterSource, new BeanOrderRowMapper());
         return userActiveOrders;
     }
 
